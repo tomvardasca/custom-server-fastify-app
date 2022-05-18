@@ -1,15 +1,26 @@
 {
   "private": true,
   "scripts": {
-    "dev": "node ./server.js",
+    "dev": "node ./server.mjs",
     "build": "next build",
-    "start": "cross-env NODE_ENV=production node ./server.js"
+    "start-dbg": "cross-env NODE_ENV=production node --inspect=0.0.0.0:9229 ./server.mjs",
+    "start": "cross-env NODE_ENV=production node ./server.mjs"
   },
   "dependencies": {
+    "comlink": "^4.0.0-alpha.10",
     "cross-env": "^7.0.2",
     "fastify": "^3.19.1",
-    "next": "latest",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "fastify-piscina": "^4.0.0",
+    "next": "^12.1.4",
+    "piscina": "^3.2.0",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
+  },
+  "volta": {
+    "node": "17.8.0",
+    "npm": "8.5.5"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.24"
   }
 }
